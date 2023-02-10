@@ -38,17 +38,6 @@ async def process_callback_button1(callback_query: types.CallbackQuery):
     await bot.send_message(callback_query.from_user.id, 'Вы выбрали Пантерный мухомор. Какой курс желаете ?',reply_markup = show_case_kb.inline_kb2)
     await bot.delete_message(chat_id=callback_query.from_user.id, message_id=callback_query.message.message_id)
 
-@dp.callback_query_handler(lambda c: c.data == 'button3')
-async def process_callback_button1(callback_query: types.CallbackQuery):
-    await bot.answer_callback_query(callback_query.id)
-    await bot.send_message(callback_query.from_user.id, 'Мухомор красный ',reply_markup = show_case_kb.inline_kb3)
-    #await bot.delete_message(chat_id=callback_query.from_user.id, message_id=callback_query.message.message_id)
-
-@dp.callback_query_handler(lambda c: c.data == 'button4')
-async def process_callback_button1(callback_query: types.CallbackQuery):
-    await bot.answer_callback_query(callback_query.id)
-    await bot.send_message(callback_query.from_user.id, 'Мухомор пантреный',reply_markup = show_case_kb.inline_kb3)
-    #await bot.delete_message(chat_id=callback_query.from_user.id, message_id=callback_query.message.message_id)
 
 @dp.callback_query_handler(lambda c: c.data == 'button5')
 async def process_callback_button1(callback_query: types.CallbackQuery):
